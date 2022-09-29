@@ -1,0 +1,62 @@
+:root {
+	--background-color: #F5F5F7;
+}
+
+@mixin common {
+	width: 100vw
+}
+
+@mixin flex($justify: unset) {
+	display: flex;
+	justify-content: $justify;
+}
+
+
+.voice {
+	&_container {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		line-height:3rem;
+	}
+}
+
+@mixin value_card($margin-top: 0rem) {
+	width: 20rem;
+	margin-top: $margin-top;
+}
+
+.value {
+	@include common;
+	&_container {
+		@include flex(space-around);
+	}
+	background-color: var(--background-color);
+	&_card1 {
+		@include value_card;
+	}
+	&_card2 {
+		@include value_card(4rem);
+	}
+	&_card3 {
+		@include value_card(8rem);
+	}
+}
+
+.profile {
+	@include common;
+	&_container {
+		@include flex;
+	}
+	&_left {
+		width: 50%;
+	}
+	&_right {
+		width: 50%;
+	}
+}
+
+.vertical {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
