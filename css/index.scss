@@ -1,58 +1,194 @@
 :root {
+	--reset-color: #FFFFFF;
 	--background-color: #F5F5F7;
+	--border-color: #C65955;
+	--font-color: #000000;
+	--sub-fonr-color: #9BACC8;
+	--caption-color: #5F5F5F;
+	--value-caption-title-color: #061A48;
 }
 
 @mixin common {
-	width: 100vw
+	width: 100vw;
+	padding: 5.5rem;
 }
 
-@mixin flex($justify: unset) {
+@mixin flex($justify: unset, $direction: unset) {
 	display: flex;
 	justify-content: $justify;
+	flex-direction: $direction;
 }
+
+@mixin left_right($left-width, $right-width, $padding-right...) {
+	.left {
+		width: $left-width;
+	}
+	.right {
+		width: $right-width;
+		padding: $padding-right;
+	}
+}
+
+@mixin button($align) {
+	border: 1px solid var(--font-color);
+	padding: 0.5rem 3.5rem;
+	margin: 1.5rem;
+	text-align: center;
+}
+
+.button {
+	@include button(left);
+}
+
+.title {
+	position: relative;
+	font-weight: 600;
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 5.5rem;
+
+	&::after {
+		content: '';
+		position: absolute;
+		border-bottom: solid 3px var(--border-color);
+		width: 4.5rem;
+		bottom: -1rem;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}
+
 
 
 .voice {
+	@include common;
+
 	&_container {
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: center;
-		line-height:3rem;
+		line-height: 3rem;
+		height: 40vh;
+	}
+
+	.subtitle {
+		font-weight: bold;
+		font-size: 2rem;
+
+		&:nth-child(2) {
+			margin-left: 2rem;
+		}
 	}
 }
 
 @mixin value_card($margin-top: 0rem) {
 	width: 20rem;
+	background-color: var(--reset-color);
 	margin-top: $margin-top;
+	position: relative;
+	height: 27rem;
 }
 
 .value {
 	@include common;
+	background-color: var(--background-color);
+
 	&_container {
 		@include flex(space-around);
 	}
-	background-color: var(--background-color);
-	&_card1 {
-		@include value_card;
+
+	@for $i from 0 through 2 {
+		&_card#{$i + 1} {
+			@include value_card($i * 4rem);
+		}
 	}
-	&_card2 {
-		@include value_card(4rem);
+
+	.subtitle {
+		text-align: center;
+		margin-bottom: 4.5rem;
 	}
-	&_card3 {
-		@include value_card(8rem);
+	&_caption {
+		color: var(--caption-color);
+		padding: 0 1.5rem;
+		&_title {
+			color: var(--value-caption-title-color);
+			font-weight: 600;
+			text-align: center;
+			font-size: 1.5rem;
+			margin: 1rem 0;
+		}
+	}
+	&_num {
+		color: var(--sub-fonr-color);
+		font-size: 5rem;
+		top: -1rem;
+		position: absolute;
+		z-index: 0;
 	}
 }
 
 .profile {
 	@include common;
+	@include left_right(50%, 50%, 2rem 0 0 3rem);
+	.subtitle {
+		letter-spacing: 1.85px;
+		color: var(--caption-color);
+		font-size: 3rem;
+		margin-bottom: 3rem;
+	}
+
 	&_container {
 		@include flex;
 	}
-	&_left {
-		width: 50%;
+}
+
+@mixin box_left_right($margin-left, $margin-right) {
+	@include left_right(50%, 50%, 2rem 2rem);
+	.left {
+		margin-left: $margin-left;
 	}
-	&_right {
-		width: 50%;
+	.right {
+		box-shadow: 2px 2px 2px var(--sub-fonr-color);
+		background-color: var(--reset-color);
+		margin: auto 0 auto $margin-right;
+		height: 19rem;
+		opacity: 0.9;
+		.subtitle {
+			text-align: left;
+			color: var(--sub-fonr-color);
+			font-size: 2rem;
+			opacity: 1;
+			font-weight: 600;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+.achivement {
+	@include common;
+	@include left_right(50%, 50%);
+	background-color: var(--background-color);
+
+	&_box {
+		@include flex;
+		margin-bottom: 4rem;
+		&_rev {
+			@include flex(unset, row-reverse);
+			margin-bottom: 4rem;
+		}
+		&_odd {
+			@include box_left_right(3rem, -3rem);
+		}
+		&_even {
+			@include box_left_right(-3rem, 3rem);
+		}
+	}
+}
+
+.news {
+	@include common;
+	&_container {
+		@include flex(space-around);
 	}
 }
 

@@ -1,5 +1,41 @@
 :root {
+  --reset-color: #FFFFFF;
   --background-color: #F5F5F7;
+  --border-color: #C65955;
+  --font-color: #000000;
+  --sub-fonr-color: #9BACC8;
+  --caption-color: #5F5F5F;
+  --value-caption-title-color: #061A48;
+}
+
+.button {
+  border: 1px solid var(--font-color);
+  padding: 0.5rem 3.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.title {
+  position: relative;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  border-bottom: solid 3px var(--border-color);
+  width: 4.5rem;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.voice {
+  width: 100vw;
+  padding: 5.5rem;
 }
 
 .voice_container {
@@ -7,48 +43,204 @@
   flex-direction: row-reverse;
   justify-content: center;
   line-height: 3rem;
+  height: 40vh;
+}
+
+.voice .subtitle {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.voice .subtitle:nth-child(2) {
+  margin-left: 2rem;
 }
 
 .value {
   width: 100vw;
+  padding: 5.5rem;
   background-color: var(--background-color);
 }
 
 .value_container {
   display: flex;
   justify-content: space-around;
+  flex-direction: unset;
 }
 
 .value_card1 {
   width: 20rem;
+  background-color: var(--reset-color);
   margin-top: 0rem;
+  position: relative;
+  height: 27rem;
 }
 
 .value_card2 {
   width: 20rem;
+  background-color: var(--reset-color);
   margin-top: 4rem;
+  position: relative;
+  height: 27rem;
 }
 
 .value_card3 {
   width: 20rem;
+  background-color: var(--reset-color);
   margin-top: 8rem;
+  position: relative;
+  height: 27rem;
+}
+
+.value .subtitle {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.value_caption {
+  color: var(--caption-color);
+  padding: 0 1.5rem;
+}
+
+.value_caption_title {
+  color: var(--value-caption-title-color);
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.value_num {
+  color: var(--sub-fonr-color);
+  font-size: 5rem;
+  top: -1rem;
+  position: absolute;
+  z-index: 0;
 }
 
 .profile {
   width: 100vw;
+  padding: 5.5rem;
+}
+
+.profile .left {
+  width: 50%;
+}
+
+.profile .right {
+  width: 50%;
+  padding: 2rem 0 0 3rem;
+}
+
+.profile .subtitle {
+  letter-spacing: 1.85px;
+  color: var(--caption-color);
+  font-size: 3rem;
+  margin-bottom: 3rem;
 }
 
 .profile_container {
   display: flex;
   justify-content: unset;
+  flex-direction: unset;
 }
 
-.profile_left {
+.achivement {
+  width: 100vw;
+  padding: 5.5rem;
+  background-color: var(--background-color);
+}
+
+.achivement .left {
   width: 50%;
 }
 
-.profile_right {
+.achivement .right {
   width: 50%;
+}
+
+.achivement_box {
+  display: flex;
+  justify-content: unset;
+  flex-direction: unset;
+  margin-bottom: 4rem;
+}
+
+.achivement_box_rev {
+  display: flex;
+  justify-content: unset;
+  flex-direction: row-reverse;
+  margin-bottom: 4rem;
+}
+
+.achivement_box_odd .left {
+  width: 50%;
+}
+
+.achivement_box_odd .right {
+  width: 50%;
+  padding: 2rem 2rem;
+}
+
+.achivement_box_odd .left {
+  margin-left: 3rem;
+}
+
+.achivement_box_odd .right {
+  box-shadow: 2px 2px 2px var(--sub-fonr-color);
+  background-color: var(--reset-color);
+  margin: auto 0 auto -3rem;
+  height: 19rem;
+  opacity: 0.9;
+}
+
+.achivement_box_odd .right .subtitle {
+  text-align: left;
+  color: var(--sub-fonr-color);
+  font-size: 2rem;
+  opacity: 1;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.achivement_box_even .left {
+  width: 50%;
+}
+
+.achivement_box_even .right {
+  width: 50%;
+  padding: 2rem 2rem;
+}
+
+.achivement_box_even .left {
+  margin-left: -3rem;
+}
+
+.achivement_box_even .right {
+  box-shadow: 2px 2px 2px var(--sub-fonr-color);
+  background-color: var(--reset-color);
+  margin: auto 0 auto 3rem;
+  height: 19rem;
+  opacity: 0.9;
+}
+
+.achivement_box_even .right .subtitle {
+  text-align: left;
+  color: var(--sub-fonr-color);
+  font-size: 2rem;
+  opacity: 1;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.news {
+  width: 100vw;
+  padding: 5.5rem;
+}
+
+.news_container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: unset;
 }
 
 .vertical {
