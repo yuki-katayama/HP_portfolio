@@ -33,6 +33,11 @@
   transform: translate(-50%, 0);
 }
 
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
 .voice {
   width: 100vw;
   padding: 5.5rem;
@@ -241,9 +246,4 @@
   display: flex;
   justify-content: space-around;
   flex-direction: unset;
-}
-
-.vertical {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
 }

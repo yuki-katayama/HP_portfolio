@@ -58,6 +58,11 @@
 	}
 }
 
+.vertical {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
 
 
 .voice {
@@ -190,9 +195,4 @@
 	&_container {
 		@include flex(space-around);
 	}
-}
-
-.vertical {
-	writing-mode: vertical-rl;
-	text-orientation: upright;
 }

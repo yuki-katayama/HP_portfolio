@@ -125,49 +125,49 @@
 <script src="./js/inject_footer_sidenav.js" ></script>
 <script>
 
-	$(document).ready(function () {
-		$('.top_slider').bxSlider({
-			auto: true,
-			pager: false,
-			controls: false,
-			mode: 'fade',
-			speed: 500,
-			pause: 3000,
-		});
-	});
+	// $(document).ready(function () {
+	// 	$('.top_slider').bxSlider({
+	// 		auto: true,
+	// 		pager: false,
+	// 		controls: false,
+	// 		mode: 'fade',
+	// 		speed: 500,
+	// 		pause: 3000,
+	// 	});
+	// });
 
-	$(function () {
-		var slider;
-		var sliderFlag = false;
-		var breakpoint = 765;
+	// $(function () {
+	// 	var slider;
+	// 	var sliderFlag = false;
+	// 	var breakpoint = 765;
 
-		$(window).on('load resize', function () {
-			sliderSet();
-		});
+	// 	$(window).on('load resize', function () {
+	// 		sliderSet();
+	// 	});
 
-		function sliderSet() {
-			var windowWidth = $(window).width();
-			if (windowWidth <= breakpoint && !sliderFlag) {
-				slider = $('#interview_slider').bxSlider({
-					prevText: '>',
-					nextText: '<',
-				});
-				sliderFlag = true;
-			} else if (windowWidth > breakpoint && sliderFlag) {
-				slider.destroySlider();
-				sliderFlag = false;
-			}
-		}
-	});
+	// 	function sliderSet() {
+	// 		var windowWidth = $(window).width();
+	// 		if (windowWidth <= breakpoint && !sliderFlag) {
+	// 			slider = $('#interview_slider').bxSlider({
+	// 				prevText: '>',
+	// 				nextText: '<',
+	// 			});
+	// 			sliderFlag = true;
+	// 		} else if (windowWidth > breakpoint && sliderFlag) {
+	// 			slider.destroySlider();
+	// 			sliderFlag = false;
+	// 		}
+	// 	}
+	// });
 
-	document.addEventListener('scroll', function (e) {
-		const back_to_top = document.getElementById("back_to_top");
-		if (window.scrollY < 500) {
-			back_to_top.style.opacity = 0;
-		} else {
-			back_to_top.style.opacity = 1;
-		}
-	})
+	// document.addEventListener('scroll', function (e) {
+	// 	const back_to_top = document.getElementById("back_to_top");
+	// 	if (window.scrollY < 500) {
+	// 		back_to_top.style.opacity = 0;
+	// 	} else {
+	// 		back_to_top.style.opacity = 1;
+	// 	}
+	// })
 
 </script>
 
