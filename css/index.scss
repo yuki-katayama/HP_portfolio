@@ -8,6 +8,9 @@
 	--value-caption-title-color: #061A48;
 }
 
+
+
+//共通関数
 @mixin common {
 	width: 100vw;
 	padding: 5.5rem;
@@ -36,6 +39,59 @@
 	text-align: center;
 }
 
+@mixin container($name) {
+	@if $name == voice {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		line-height: 3rem;
+		height: 40vh;
+
+	} @else if $name == value {
+		@include flex(space-around);
+
+	} @else if $name == profile {
+		@include flex;
+
+	} @else if $name == achivement {
+
+	} @else if $name == news {
+		@include flex(space-around);
+	}
+}
+
+@mixin subtitle($name) {
+	@if $name == voice {
+		font-weight: bold;
+		font-size: 2rem;
+		&:nth-child(2) {
+			margin-left: 2rem;
+		}
+
+	} @else if $name == value {
+		text-align: center;
+		margin-bottom: 4.5rem;
+
+	} @else if $name == profile {
+		letter-spacing: 1.85px;
+		color: var(--caption-color);
+		font-size: 3rem;
+		margin-bottom: 3rem;
+
+	} @else if $name == achivement {
+		text-align: left;
+		color: var(--sub-fonr-color);
+		font-size: 2rem;
+		opacity: 1;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+
+	} @else if $name == news {
+	}
+}
+
+
+// 共通クラス
 .button {
 	@include button(left);
 }
@@ -64,28 +120,20 @@
 }
 
 
-
+// ボイス
 .voice {
 	@include common;
 
-	&_container {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: center;
-		line-height: 3rem;
-		height: 40vh;
+	.container {
+		@include container(voice);
 	}
-
 	.subtitle {
-		font-weight: bold;
-		font-size: 2rem;
-
-		&:nth-child(2) {
-			margin-left: 2rem;
-		}
+		@include subtitle(voice);
 	}
 }
 
+
+// バリュー
 @mixin value_card($margin-top: 0rem) {
 	width: 20rem;
 	background-color: var(--reset-color);
@@ -98,8 +146,11 @@
 	@include common;
 	background-color: var(--background-color);
 
-	&_container {
-		@include flex(space-around);
+	.container {
+		@include container(value);
+	}
+	.subtitle {
+		@include subtitle(value);
 	}
 
 	@for $i from 0 through 2 {
@@ -108,10 +159,6 @@
 		}
 	}
 
-	.subtitle {
-		text-align: center;
-		margin-bottom: 4.5rem;
-	}
 	&_caption {
 		color: var(--caption-color);
 		padding: 0 1.5rem;
@@ -132,21 +179,22 @@
 	}
 }
 
+
+// プロフィール
 .profile {
 	@include common;
 	@include left_right(50%, 50%, 2rem 0 0 3rem);
 	.subtitle {
-		letter-spacing: 1.85px;
-		color: var(--caption-color);
-		font-size: 3rem;
-		margin-bottom: 3rem;
+		@include subtitle(profile);
 	}
 
-	&_container {
-		@include flex;
+	.container {
+		@include container(profile);
 	}
 }
 
+
+// アチーブメント
 @mixin box_left_right($margin-left, $margin-right) {
 	@include left_right(50%, 50%, 2rem 2rem);
 	.left {
@@ -159,12 +207,7 @@
 		height: 19rem;
 		opacity: 0.9;
 		.subtitle {
-			text-align: left;
-			color: var(--sub-fonr-color);
-			font-size: 2rem;
-			opacity: 1;
-			font-weight: 600;
-			margin-bottom: 1.5rem;
+			@include subtitle(achivement);
 		}
 	}
 }
@@ -190,9 +233,11 @@
 	}
 }
 
+
+// ニュース
 .news {
 	@include common;
-	&_container {
-		@include flex(space-around);
+	.container {
+		@include container(news);
 	}
 }
