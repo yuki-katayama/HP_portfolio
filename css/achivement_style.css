@@ -11,14 +11,14 @@
   display: flex;
   justify-content: unset;
   flex-direction: unset;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .achivement .box_rev {
   display: flex;
   justify-content: unset;
   flex-direction: row-reverse;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .achivement .box_odd .left {
@@ -35,7 +35,7 @@
 }
 
 .achivement .box_odd .right {
-  box-shadow: 2px 2px 2px #9BACC8;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
   margin: auto 0 auto -3rem;
   height: 19rem;
@@ -56,7 +56,7 @@
 }
 
 .achivement .box_even .right {
-  box-shadow: 2px 2px 2px #9BACC8;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
   margin: auto 0 auto 3rem;
   height: 19rem;

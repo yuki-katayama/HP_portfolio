@@ -8,7 +8,7 @@
   flex-direction: row-reverse;
   justify-content: center;
   line-height: 3rem;
-  height: 40vh;
+  height: calc(1.2vw * 35);
 }
 
 .voice .subtitle {
