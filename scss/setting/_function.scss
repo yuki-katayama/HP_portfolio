@@ -1,3 +1,7 @@
 @function colors($key) {
     @return map-get($colors, $key);
 }
+
+@function breakpoints($breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+}

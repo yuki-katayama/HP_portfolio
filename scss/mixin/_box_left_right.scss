@@ -13,4 +13,14 @@
 			@include subtitle(achivement);
 		}
 	}
+	@include mq(sp) {
+		@include left_right(100%, 100%, unset);
+		.right {
+			margin-top: -2rem;
+			height: unset;
+			margin: -2rem auto;
+			width: 85%;
+			padding: 1.5rem;
+		}
+	}
 }

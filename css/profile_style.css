@@ -1,6 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .profile {
   width: 100vw;
   padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .profile {
+    padding: 2.5rem 1.5rem 8.5rem;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .profile .left {
@@ -12,18 +33,40 @@
   padding: 2rem 0 0 3rem;
 }
 
+@media screen and (max-width: 767px) {
+  .profile .left {
+    width: 100%;
+  }
+  .profile .right {
+    width: 100%;
+    padding: unset;
+  }
+}
+
 .profile .container {
   display: flex;
   justify-content: unset;
   flex-direction: unset;
 }
 
+@media screen and (max-width: 767px) {
+  .profile .container {
+    display: block;
+  }
+}
+
 .profile .subtitle {
   letter-spacing: 1.85px;
-  color: var(--caption-color);
+  color: #5F5F5F;
   font-size: 3rem;
   margin-bottom: 3rem;
   font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .profile .subtitle {
+    font-size: 1.8rem;
+  }
 }
 
 .profile .right {
@@ -31,4 +74,17 @@
   flex-direction: column;
   justify-content: center;
   line-height: 2.3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .profile .right {
+    position: relative;
+    top: -5rem;
+    background: #FFFFFF;
+    padding: 2rem 1rem;
+    width: 85%;
+    margin-left: 3.5rem;
+    line-height: 2rem;
+    background: #F5F5F7;
+  }
 }

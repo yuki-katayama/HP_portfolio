@@ -3,6 +3,8 @@
 @import './setting/config';
 @import './setting/function';
 
+@import './mixin/mq';
+
 @import './module/button.scss';
 
 // 共通クラス
@@ -36,4 +38,17 @@
 
 .align_right {
 	text-align: right;
+}
+
+.only_sp {
+	display: none!important;
+}
+
+@include mq(sp) {
+	.only_sp {
+		display: block!important;
+	}
+	.only_pc {
+		display: none!important;
+	}
 }

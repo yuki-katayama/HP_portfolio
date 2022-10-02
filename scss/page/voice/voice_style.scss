@@ -2,9 +2,11 @@
 @import '../../mixin/container';
 
 @import '../../setting/config';
+@import '../../setting/common';
 
 
 .voice {
 	@import './block/container_subtitle';
+	@import './block/caption';
 	@extend %common;
 }

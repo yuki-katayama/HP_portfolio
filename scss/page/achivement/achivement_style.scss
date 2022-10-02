@@ -1,11 +1,13 @@
 @import '../../setting/config';
 @import '../../setting/function';
+@import '../../setting/common';
 
 @import '../../mixin/left_right';
 @import '../../mixin/box_left_right';
 @import '../../mixin/container';
 @import '../../mixin/subtitle';
 @import '../../mixin/flex';
+@import '../../mixin/mq';
 
 
 .achivement {

@@ -1,5 +1,6 @@
 @import '../../setting/config';
 @import '../../setting/function';
+@import '../../setting/common';
 
 @import '../../mixin/left_right';
 
@@ -10,11 +11,9 @@
 .profile {
 	@extend %common;
 	@include left_right(50%, 50%, 2rem 0 0 3rem);
-	@import './block/container_subtitle';
-	.right {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		line-height: 2.3rem
+	@include mq(sp) {
+		@include left_right(100%, 100%, unset);
 	}
+	@import './block/container_subtitle';
+	@import './block/right';
 }

@@ -13,10 +13,29 @@
 	}
 	&_title {
 		text-align: left;
-		color: var(--sub-fonr-color);
+		color: colors(sub-font);
 		font-size: 2rem;
 		opacity: 1;
 		font-weight: 600;
 		margin-bottom: 1.5rem;
+	}
+
+	@include mq(sp) {
+		display: block;
+		&_rev {
+			display: block;
+		}
+		&_odd {
+			@include box_left_right(0, 0);
+		}
+		&_even {
+			@include box_left_right(0, 0);
+		}
+		&_title {
+			font-size: 1.5rem;
+		}
+		&_rev > .right > .align_left {
+			text-align:right;
+		}
 	}
 }

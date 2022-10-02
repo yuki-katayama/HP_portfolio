@@ -2,7 +2,7 @@
 /* Reset box-model and set borders */
 /* ============================================ */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
 *,
 ::before,
 ::after {
@@ -49,8 +49,7 @@ html {
  */
 body {
   margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
-  color: var(--main-font-color);
+  color: colors(font);
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -86,12 +85,7 @@ h5,
 h6 {
   font-size: inherit;
   margin: 0;
-  color: var(--button-color-before);
   font-weight: 100;
-}
-
-p {
-  color: var(--caption-font-color);
 }
 
 /* Lists (enumeration) */
@@ -173,10 +167,6 @@ abbr[title] {
 b,
 strong {
   font-weight: 600;
-}
-
-.strong_line {
-  background: linear-gradient(transparent 60%, var(--highlighter-color) 60%);
 }
 
 /**
@@ -428,6 +418,14 @@ th {
   }
 }
 
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .button {
   border: 1px solid #000000;
   padding: 0.7rem 3.5rem;
@@ -463,4 +461,17 @@ th {
 
 .align_right {
   text-align: right;
+}
+
+.only_sp {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .only_sp {
+    display: block !important;
+  }
+  .only_pc {
+    display: none !important;
+  }
 }

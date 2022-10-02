@@ -1,7 +1,10 @@
-// $colors: (
-//     twitter: #55acee,
-//     facebook: #3b5998,
-// );
+// 変数
+$breakpoints: (
+  sp: 'screen and (max-width: 767px)',
+  tab: 'screen and (min-width: 768px) and (max-width: 1024)',
+  pc: 'screen and (min-width: 1025px)'
+) !default;
+
 
 $colors: (
 	reset: #FFFFFF,
@@ -11,9 +14,11 @@ $colors: (
 	sub-font: #9BACC8,
 	caption: #5F5F5F,
 	value-caption-title: #061A48,
+	date: #6C6666,
 );
 
-%common {
-	width: 100vw;
-	padding: 5.5rem;
+// フォント
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap');
+body {
+	font-family: 'Noto Sans JP', sans-serif;
 }
