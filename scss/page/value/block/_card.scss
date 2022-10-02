@@ -1,6 +1,6 @@
 @for $i from 0 through 2 {
 	.card#{$i + 1} {
-		width: 20rem;
+		width: 17rem;
 		background-color: colors(reset);
 		margin-top: $i * 4rem;
 		position: relative;
@@ -14,7 +14,7 @@
 		font-weight: 600;
 		text-align: center;
 		font-size: 1.5rem;
-		margin: 1rem 0;
+		margin: 1.5rem 0;
 	}
 	&_caption {
 		color: colors(caption);
@@ -22,7 +22,7 @@
 	}
 	&_num {
 		color: colors(sub-font);
-		font-size: 5rem;
+		font-size: 4.5rem;
 		top: -1rem;
 		position: absolute;
 		z-index: 0;

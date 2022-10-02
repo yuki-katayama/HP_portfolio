@@ -11,4 +11,10 @@
 	@extend %common;
 	@include left_right(50%, 50%, 2rem 0 0 3rem);
 	@import './block/container_subtitle';
+	.right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		line-height: 2.3rem
+	}
 }

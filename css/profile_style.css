@@ -23,4 +23,12 @@
   color: var(--caption-color);
   font-size: 3rem;
   margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.profile .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2.3rem;
 }

@@ -26,7 +26,7 @@
  */
 html {
   font-size: 1.2vw;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
@@ -426,41 +426,4 @@ th {
   sub {
     font-size: 2rem;
   }
-}
-
-.button {
-  border: 1px solid #000000;
-  padding: 0.7rem 3.5rem;
-  margin: 1rem 0 0 1.5rem;
-}
-
-.title {
-  position: relative;
-  font-weight: 600;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 4.5rem;
-}
-
-.title::after {
-  content: '';
-  position: absolute;
-  border-bottom: solid 3px #C65955;
-  width: 4.5rem;
-  bottom: -1rem;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.vertical {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-}
-
-.align_left {
-  text-align: left;
-}
-
-.align_right {
-  text-align: right;
 }

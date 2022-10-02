@@ -1,9 +1,9 @@
 .box {
 	@include flex;
-	margin-bottom: 4rem;
+	margin-bottom: 6rem;
 	&_rev {
 		@include flex(unset, row-reverse);
-		margin-bottom: 4rem;
+		margin-bottom: 6rem;
 	}
 	&_odd {
 		@include box_left_right(3rem, -3rem);
