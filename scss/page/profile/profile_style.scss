@@ -1,0 +1,14 @@
+@import '../../setting/config';
+@import '../../setting/function';
+
+@import '../../mixin/left_right';
+
+@import '../../mixin/container';
+@import '../../mixin/subtitle';
+@import '../../mixin/flex';
+
+.profile {
+	@extend %common;
+	@include left_right(50%, 50%, 2rem 0 0 3rem);
+	@import './block/container_subtitle';
+}

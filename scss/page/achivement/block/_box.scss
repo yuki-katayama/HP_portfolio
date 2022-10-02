@@ -1,0 +1,22 @@
+.box {
+	@include flex;
+	margin-bottom: 4rem;
+	&_rev {
+		@include flex(unset, row-reverse);
+		margin-bottom: 4rem;
+	}
+	&_odd {
+		@include box_left_right(3rem, -3rem);
+	}
+	&_even {
+		@include box_left_right(-3rem, 3rem);
+	}
+	&_title {
+		text-align: left;
+		color: var(--sub-fonr-color);
+		font-size: 2rem;
+		opacity: 1;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+	}
+}

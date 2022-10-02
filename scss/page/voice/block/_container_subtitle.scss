@@ -1,0 +1,7 @@
+.container {
+	@include container(voice);
+}
+
+.subtitle {
+	@include subtitle(voice);
+}

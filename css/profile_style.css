@@ -1,0 +1,26 @@
+.profile {
+  width: 100vw;
+  padding: 5.5rem;
+}
+
+.profile .left {
+  width: 50%;
+}
+
+.profile .right {
+  width: 50%;
+  padding: 2rem 0 0 3rem;
+}
+
+.profile .container {
+  display: flex;
+  justify-content: unset;
+  flex-direction: unset;
+}
+
+.profile .subtitle {
+  letter-spacing: 1.85px;
+  color: var(--caption-color);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}

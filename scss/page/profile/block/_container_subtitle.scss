@@ -1,0 +1,7 @@
+.container {
+	@include container(profile);
+}
+
+.subtitle {
+	@include subtitle(profile);
+}

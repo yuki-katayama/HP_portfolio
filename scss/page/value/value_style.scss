@@ -1,0 +1,14 @@
+@import '../../mixin/container';
+@import '../../mixin/subtitle';
+@import '../../mixin/flex';
+
+@import '../../setting/config';
+@import '../../setting/function';
+
+
+.value {
+	background-color: colors(background);
+	@import './block/container_subtitle';
+	@import './block/card';
+	@extend %common;
+}

@@ -5,8 +5,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/compiled/reset.css" />
-	<link rel="stylesheet" href="./css/compiled/index.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	<link rel="stylesheet" href="./css/voice_style.css" />
+	<link rel="stylesheet" href="./css/value_style.css" />
+	<link rel="stylesheet" href="./css/profile_style.css" />
+	<link rel="stylesheet" href="./css/achivement_style.css" />
+	<link rel="stylesheet" href="./css/news_style.css" />
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -34,32 +38,32 @@
 			<article class="value">
 				<h2 class="title">VALUE</h2>
 				<h3 class="subtitle">わたしたちは3つの価値を提供します。</h3>
-				<section class="container">
-					<div class="value_card1">
-						<p class="value_num">01</p>
+				<div class="container">
+					<section class="card1">
+						<p class="card_num">01</p>
 						<figure>
 							<img src="./images/value1.jpg" width="100%"/>
 						</figure>
-						<h3 class="value_caption_title">コスパの良さ</h3>
-						<p class="value_caption">私たちはエンジニア3人体制でデザインから開発、SEOまで一気通貫して対応します。必要なときに必要な量の仕事を低コストでハイクオリティで提供します。</p>
-					</div>
-					<div class="value_card2">
-						<p class="value_num">02</p>
+						<h3 class="card_title">コスパの良さ</h3>
+						<p class="card_caption">私たちはエンジニア3人体制でデザインから開発、SEOまで一気通貫して対応します。必要なときに必要な量の仕事を低コストでハイクオリティで提供します。</p>
+					</section>
+					<section class="card2">
+						<p class="card_num">02</p>
 						<figure>
 							<img src="./images/value2.jpg" width="100%"/>
 						</figure>
-						<h3 class="value_caption_title">徹底したヒアリング</h3>
-						<p class="value_caption">発注者以上にそのPJに当事者意識を持って課題解決に臨みます。週に1回以上のMTG、対面でのコミニュケーションを大切にしどこにでも足を運びます。</p>
-					</div>
-					<div class="value_card3">
-						<p class="value_num">03</p>
+						<h3 class="card_title">徹底したヒアリング</h3>
+						<p class="card_caption">発注者以上にそのPJに当事者意識を持って課題解決に臨みます。週に1回以上のMTG、対面でのコミニュケーションを大切にしどこにでも足を運びます。</p>
+					</section>
+					<section class="card3">
+						<p class="card_num">03</p>
 						<figure>
 							<img src="./images/value3.jpg" width="100%"/>
 						</figure>
-						<h3 class="value_caption_title">運用のしやすさ</h3>
-						<p class="value_caption">納品後の運用を考えノンプログラムでコンテンツの新規作成・更新作業がしやすいシステムを構築。ブログやカレンダー、多言語機能まで自由に操作いただけます。</p>
-					</div>
-				</section>
+						<h3 class="card_title">運用のしやすさ</h3>
+						<p class="card_caption">納品後の運用を考えノンプログラムでコンテンツの新規作成・更新作業がしやすいシステムを構築。ブログやカレンダー、多言語機能まで自由に操作いただけます。</p>
+					</section>
+				</div>
 			</article>
 			<article class="profile">
 				<h2 class="title">PROFILE</h2>
@@ -75,36 +79,42 @@
 			</article>
 			<article class="achivement">
 				<h2 class="title">ACHIVEMENT</h2>
-				<div class="achivement_box achivement_box_odd">
+				<section class="box box_odd">
 					<figure class="left">
 						<img src="./images/achivement1.jpg" width="100%"/>
 					</figure>
-					<section class="right">
-						<h3 class="subtitle">請戸小学校</h3>
+					<div class="right">
+						<h3 class="box_title">請戸小学校</h3>
 						<p>2011年3月11日・東日本大震災、未だかつて経験したことのない大地震・大 津波。倒壊を免れた校舎に刻まれた脅威と、全員避難することができた経験 を伝えるため、2021年より震災遺構として一般公開いたしました。訪れた人 の、“自分事として震災をとらえ、防災について考えるきっかけ”になれば幸 いです。</p>
-						<button class="button">PREVIEW!</button>
-					</section>
-				</div>
-				<div class="achivement_box_rev achivement_box_even">
+						<div class="align_right">
+							<button class="button">PREVIEW!</button>
+						</div>
+					</div>
+				</section>
+				<section class="box_rev box_even">
 					<figure class="left">
 						<img src="./images/achivement2.jpg" width="100%"/>
 					</figure>
-					<section class="right">
-						<h3 class="subtitle">キャリア・キャディ</h3>
+					<div class="right">
+						<h3 class="box_title">キャリア・キャディ</h3>
 						<p>人生100年時代のいま、次の活躍の「場」へ進むための助言をもらう「キャ リア・キャディー」をつけるという、ご提案。次の「場」に向かってナイスショット を決めるための助言を「キャリア・キャディー」に求めることが、最善解を探す手が かりにつながります。</p>
-						<button class="button">PREVIEW!</button>
-					</section>
-				</div>
-				<div class="achivement_box achivement_box_odd">
-					<figure class="left">
+						<div class="align_left">
+							<button class="button">PREVIEW!</button>
+						</div>
+					</div>
+				</section>
+				<section class="box box_odd">
+					<figure class="right">
 						<img src="./images/achivement3.jpg" width="100%"/>
 					</figure>
-					<section class="right">
-						<h3 class="subtitle">Lloyd-Fish-Factory</h3>
+					<div class="right">
+						<h3 class="box_title">Lloyd-Fish-Factory</h3>
 						<p>店を出すには簡単です。でも、売れる（支持される）店を創るのは難しいです。 それには”戦略”と”戦術”が必要になります。 「自分の思いを店舗という形」にすると同時にビジネスとして 成功・継続させ るには、”失敗しない為のノウハウと知識を習得します”。</p>
-						<button class="button">PREVIEW!</button>
-					</section>
-				</div>
+						<div class="align_right">
+							<button class="button">PREVIEW!</button>
+						</div>
+					</div>
+				</section>
 			</article>
 			<article class="news">
 				<h2 class="title">NEWS</h2>

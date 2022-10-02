@@ -1,0 +1,10 @@
+@import '../../mixin/subtitle';
+@import '../../mixin/container';
+
+@import '../../setting/config';
+
+
+.voice {
+	@import './block/container_subtitle';
+	@extend %common;
+}

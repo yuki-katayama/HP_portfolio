@@ -1,0 +1,10 @@
+.news {
+  width: 100vw;
+  padding: 5.5rem;
+}
+
+.news .container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: unset;
+}

@@ -1,0 +1,19 @@
+// $colors: (
+//     twitter: #55acee,
+//     facebook: #3b5998,
+// );
+
+$colors: (
+	reset: #FFFFFF,
+	background: #F5F5F7,
+	title-border: #C65955,
+	font: #000000,
+	sub-font: #9BACC8,
+	caption: #5F5F5F,
+	value-caption-title: #061A48,
+);
+
+%common {
+	width: 100vw;
+	padding: 5.5rem;
+}

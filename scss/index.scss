@@ -1,0 +1,39 @@
+@import './base/reset';
+
+@import './setting/config';
+@import './setting/function';
+
+@import './module/button.scss';
+
+// 共通クラス
+
+.title {
+	position: relative;
+	font-weight: 600;
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 5.5rem;
+
+	&::after {
+		content: '';
+		position: absolute;
+		border-bottom: solid 3px colors(title-border);
+		width: 4.5rem;
+		bottom: -1rem;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}
+
+.vertical {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}

@@ -1,0 +1,24 @@
+@mixin subtitle($name) {
+	@if $name == voice {
+		font-weight: bold;
+		font-size: 2rem;
+		&:nth-child(2) {
+			margin-left: 2rem;
+		}
+
+	} @else if $name == value {
+		text-align: center;
+		margin-bottom: 4.5rem;
+
+	} @else if $name == profile {
+		letter-spacing: 1.85px;
+		color: var(--caption-color);
+		font-size: 3rem;
+		margin-bottom: 3rem;
+
+	} @else if $name == achivement {
+
+
+	} @else if $name == news {
+	}
+}

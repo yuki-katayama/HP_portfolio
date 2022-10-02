@@ -1,0 +1,16 @@
+@mixin box_left_right($margin-left, $margin-right) {
+	@include left_right(50%, 50%, 2rem 2rem);
+	.left {
+		margin-left: $margin-left;
+	}
+	.right {
+		box-shadow: 2px 2px 2px colors(sub-font);
+		background-color: colors(reset);
+		margin: auto 0 auto $margin-right;
+		height: 19rem;
+		opacity: 0.9;
+		.subtitle {
+			@include subtitle(achivement);
+		}
+	}
+}

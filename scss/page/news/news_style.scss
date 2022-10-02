@@ -1,0 +1,14 @@
+@import '../../setting/config';
+@import '../../setting/function';
+
+@import '../../mixin/left_right';
+
+@import '../../mixin/container';
+@import '../../mixin/subtitle';
+@import '../../mixin/flex';
+
+.news {
+	@extend %common;
+	@import './block/container_subtitle';
+}
+

@@ -12,10 +12,11 @@
 }
 
 .calendar-container-embed .hour {
-    height: 60px;
-    pointer-events: none;
-    line-height: 60px;
+	height: 60px;
+	pointer-events: none;
+	line-height: 60px;
 }
+
 /* Document */
 /* ============================================ */
 
@@ -236,7 +237,7 @@ sup {
 
 sub {
 	top: -9px;
-	font-size: 0.8rem!important;
+	font-size: 0.8rem !important;
 }
 
 sup {
