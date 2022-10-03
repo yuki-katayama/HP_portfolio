@@ -17,6 +17,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+	<script src="./js/fadein.js" ></script>
+	<script src="./js/inject_footer_sidenav.js" ></script>
+
 	<title>portofolio</title>
 </head>
 
@@ -30,7 +34,7 @@
 			</figure>
 			<article class="voice">
 				<h2 class="title">VOICE</h2>
-				<section class="container">
+				<section class="container  fade_in_center">
 					<div class="subtitle only_pc">
 						<h3 class="vertical">略から製作まで</h3>
 						<h3 class="vertical">皆さんの相棒として</h3>
@@ -55,7 +59,7 @@
 				<h2 class="title">VALUE</h2>
 				<h3 class="subtitle">わたしたちは3つの価値を提供します。</h3>
 				<div class="container">
-					<section class="card1">
+					<section class="card1 fade_in_bottom">
 						<p class="card_num">01</p>
 						<figure>
 							<img src="./images/value1.jpg" width="100%"/>
@@ -63,7 +67,7 @@
 						<h3 class="card_title">コスパの良さ</h3>
 						<p class="card_caption">私たちはエンジニア3人体制でデザインから開発、SEOまで一気通貫して対応します。必要なときに必要な量の仕事を低コストでハイクオリティで提供します。</p>
 					</section>
-					<section class="card2">
+					<section class="card2  fade_in_bottom">
 						<p class="card_num">02</p>
 						<figure>
 							<img src="./images/value2.jpg" width="100%"/>
@@ -71,7 +75,7 @@
 						<h3 class="card_title">徹底したヒアリング</h3>
 						<p class="card_caption">発注者以上にそのPJに当事者意識を持って課題解決に臨みます。週に1回以上のMTG、対面でのコミニュケーションを大切にしどこにでも足を運びます。</p>
 					</section>
-					<section class="card3">
+					<section class="card3  fade_in_bottom">
 						<p class="card_num">03</p>
 						<figure>
 							<img src="./images/value3.jpg" width="100%"/>
@@ -84,10 +88,10 @@
 			<article class="profile">
 				<h2 class="title">PROFILE</h2>
 				<div class="container">
-					<figure class="left">
+					<figure class="left fade_in_center">
 						<img src="./images/profile.jpg" width="100%"/>
 					</figure>
-					<section class="right">
+					<section class="right  fade_in_right">
 						<h3 class="subtitle">小さな積み重ね</h3>
 						<p>会社という「ステータス」を失った自分に価値はあるのか？明日会社が倒産したら仕事 があるのか？。個人の力でゼロから価値(お金)を生み出せる人になりたい！そんな思い から副業を始めました。初めて1円を自ら稼いでみて会社のNH,KYではなく、イチ個人 として評価していただいた。その評価には紛うことないお客様からの素直な意見であり、 良いことも悪いことも会社で経験した以上に自分の胸にスッと入ってきました。副業で 発見した課題を改めていき本業にも最高のシナジー生み出していきたいと思います。 小さな積み重ねがもっと遠くまで僕たちを運んでくれるはず。</p>
 					</section>
@@ -95,7 +99,7 @@
 			</article>
 			<article class="achivement">
 				<h2 class="title">ACHIVEMENT</h2>
-				<section class="box box_odd">
+				<section class="box box_odd fade_in_bottom">
 					<figure class="left">
 						<img src="./images/achivement1.jpg" width="100%"/>
 					</figure>
@@ -107,7 +111,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="box_rev box_even">
+				<section class="box_rev box_even fade_in_bottom">
 					<figure class="left">
 						<img src="./images/achivement2.jpg" width="100%"/>
 					</figure>
@@ -119,7 +123,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="box box_odd">
+				<section class="box box_odd fade_in_bottom">
 					<figure class="left">
 						<img src="./images/achivement3.jpg" width="100%"/>
 					</figure>
@@ -135,14 +139,14 @@
 			<article class="news">
 				<h2 class="title">NEWS</h2>
 				<div class="container">
-					<figure class="left">
+					<figure class="left fade_in_left">
 						<a href="https://note.com/sharehouse_dance/n/n1151ebdee1de">
 							<img src="./images/news1.jpg" width="100%"/>
 							<figcaption>1円を稼ぐって難しい</figcaption>
 							<time>2022.8.21</time>
 						</a>
 					</figure>
-					<figure class="right">
+					<figure class="right fade_in_right">
 						<a href="https://note.com/sharehouse_dance/n/n798ab7c30d9e">
 							<img src="./images/news2.jpg" width="100%"/>
 							<figcaption>Webサイトの公開はゴールではない</figcaption>
@@ -155,54 +159,5 @@
 		<footer id="footer"></footer>
 	</main>
 </body>
-
-<script src="./js/inject_footer_sidenav.js" ></script>
-<script>
-
-	// $(document).ready(function () {
-	// 	$('.top_slider').bxSlider({
-	// 		auto: true,
-	// 		pager: false,
-	// 		controls: false,
-	// 		mode: 'fade',
-	// 		speed: 500,
-	// 		pause: 3000,
-	// 	});
-	// });
-
-	// $(function () {
-	// 	var slider;
-	// 	var sliderFlag = false;
-	// 	var breakpoint = 765;
-
-	// 	$(window).on('load resize', function () {
-	// 		sliderSet();
-	// 	});
-
-	// 	function sliderSet() {
-	// 		var windowWidth = $(window).width();
-	// 		if (windowWidth <= breakpoint && !sliderFlag) {
-	// 			slider = $('#interview_slider').bxSlider({
-	// 				prevText: '>',
-	// 				nextText: '<',
-	// 			});
-	// 			sliderFlag = true;
-	// 		} else if (windowWidth > breakpoint && sliderFlag) {
-	// 			slider.destroySlider();
-	// 			sliderFlag = false;
-	// 		}
-	// 	}
-	// });
-
-	// document.addEventListener('scroll', function (e) {
-	// 	const back_to_top = document.getElementById("back_to_top");
-	// 	if (window.scrollY < 500) {
-	// 		back_to_top.style.opacity = 0;
-	// 	} else {
-	// 		back_to_top.style.opacity = 1;
-	// 	}
-	// })
-
-</script>
 
 </html>

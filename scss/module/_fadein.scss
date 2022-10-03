@@ -1,0 +1,19 @@
+@import "../mixin/fadein";
+
+.fade_in {
+	&_center {
+		@include fadein(0px, 0px);
+	}
+	&_bottom {
+		@include fadein(unset, 40px);
+	}
+	&_top {
+		@include fadein(unset, -40px);
+	}
+	&_left {
+		@include fadein(-40px, unset);
+	}
+	&_right {
+		@include fadein(40px, unset);
+	}
+}
