@@ -81,7 +81,15 @@
 }
 
 @media screen and (max-width: 700px) {
-  #pop-up:checked + .overlay {
+  #pop-up1:checked + .overlay {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #pop-up2:checked + .overlay {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #pop-up3:checked + .overlay {
     visibility: hidden;
     opacity: 0;
   }

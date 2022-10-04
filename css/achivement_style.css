@@ -85,6 +85,11 @@ body {
   }
 }
 
+.achivement .box_odd_button {
+  text-align: right;
+  margin: 1rem 0 0 0;
+}
+
 .achivement .box_even .left {
   width: 50%;
 }
@@ -123,6 +128,11 @@ body {
   }
 }
 
+.achivement .box_even_button {
+  text-align: left;
+  margin: 1rem 0 0 0;
+}
+
 .achivement .box_title {
   text-align: left;
   color: #9BACC8;
@@ -139,17 +149,17 @@ body {
   .achivement .box_rev {
     display: block;
   }
-  .achivement .box_odd .left {
+  .achivement .box_odd .left, .achivement .box_even .left {
     width: 50%;
   }
-  .achivement .box_odd .right {
+  .achivement .box_odd .right, .achivement .box_even .right {
     width: 50%;
     padding: 2rem 2rem;
   }
-  .achivement .box_odd .left {
+  .achivement .box_odd .left, .achivement .box_even .left {
     margin-left: 0;
   }
-  .achivement .box_odd .right {
+  .achivement .box_odd .right, .achivement .box_even .right {
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     background-color: #FFFFFF;
     margin: auto 0 auto 0;
@@ -159,14 +169,14 @@ body {
 }
 
 @media screen and (max-width: 767px) and (max-width: 767px) {
-  .achivement .box_odd .left {
+  .achivement .box_odd .left, .achivement .box_even .left {
     width: 100%;
   }
-  .achivement .box_odd .right {
+  .achivement .box_odd .right, .achivement .box_even .right {
     width: 100%;
     padding: unset;
   }
-  .achivement .box_odd .right {
+  .achivement .box_odd .right, .achivement .box_even .right {
     margin-top: -2rem;
     height: unset;
     margin: -2rem auto;
@@ -176,6 +186,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .achivement .box_odd_button, .achivement .box_even_button {
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
   .achivement .box_even .left {
     width: 50%;
   }
@@ -215,9 +229,6 @@ body {
 @media screen and (max-width: 767px) {
   .achivement .box_title {
     font-size: 1.5rem;
-  }
-  .achivement .box_rev > .right > .align_left {
-    text-align: right;
   }
 }
 

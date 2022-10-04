@@ -7,9 +7,15 @@
 	}
 	&_odd {
 		@include box_left_right(3rem, -3rem);
+		&_button {
+			@include button_container(right, 1rem 0 0 0);
+		}
 	}
 	&_even {
 		@include box_left_right(-3rem, 3rem);
+		&_button {
+			@include button_container(left, 1rem 0 0 0);
+		}
 	}
 	&_title {
 		text-align: left;
@@ -25,17 +31,17 @@
 		&_rev {
 			display: block;
 		}
-		&_odd {
+		&_odd, &_even {
 			@include box_left_right(0, 0);
+			&_button {
+				@include button_container(center, 1rem 0 0 0);
+			}
 		}
 		&_even {
 			@include box_left_right(0, 0);
 		}
 		&_title {
 			font-size: 1.5rem;
-		}
-		&_rev > .right > .align_left {
-			text-align:right;
 		}
 	}
 }

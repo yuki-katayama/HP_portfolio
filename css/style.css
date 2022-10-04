@@ -591,7 +591,15 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  #pop-up:checked + .overlay {
+  #pop-up1:checked + .overlay {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #pop-up2:checked + .overlay {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #pop-up3:checked + .overlay {
     visibility: hidden;
     opacity: 0;
   }
@@ -618,14 +626,6 @@ body {
 .vertical {
   writing-mode: vertical-rl;
   text-orientation: upright;
-}
-
-.align_left {
-  text-align: left;
-}
-
-.align_right {
-  text-align: right;
 }
 
 .only_sp {
