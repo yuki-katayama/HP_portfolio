@@ -1,4 +1,4 @@
 # ポートフォリオ
-## CSSのファイル設計
+## SCSSのファイル設計
 https://tsudoi.org/guide/detail/9.html
 
