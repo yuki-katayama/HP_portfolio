@@ -39,6 +39,13 @@
 }
 
 @include mq(sp) {
+	.title {
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+		&::after {
+			bottom: -0.6rem;
+		}
+	}
 	.only_sp {
 		display: block!important;
 	}
