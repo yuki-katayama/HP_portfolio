@@ -1,7 +1,6 @@
 const kindOfFade = ["top", "bottom", "left", "right", "center"];
 
 document.addEventListener('scroll', function (e) {
-	console.log(screen.width)
 	for (const kind of kindOfFade) {
 		const classDoc = document.getElementsByClassName('fade_in_' + kind);
 		for (let i = 0; i < classDoc.length; i++) {

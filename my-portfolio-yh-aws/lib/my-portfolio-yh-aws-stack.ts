@@ -13,6 +13,7 @@ export class MyPortfolioYhAwsStack extends cdk.Stack {
 
     const domainName = "tekitou.ga";
     const backetName = "my-port-folio-yh-tekitou-cdk";
+    const deployPathToBacket = "./../deploy/";
 
     const route53 = new Route53();
     const s3 = new S3();
@@ -23,10 +24,10 @@ export class MyPortfolioYhAwsStack extends cdk.Stack {
     s3.createResources(this, backetName);
     /* cloudFrontのOAIを作成 */
     cloudfront.createOAI(this);
-    /* s3のcloudFrontからのアクセスを許可する */
+    /* cloudFrontからのアクセスをs3側で許可する */
     s3.enableAccessFromCloudFront(cloudfront.oai);
     /* s3へソースをデプロイ */
-    s3.deploy(this, "./../deploy/");
+    s3.deploy(this, deployPathToBacket);
     /* route53 作成 */
     route53.createResources(this, domainName);
     /* 証明書発行 */

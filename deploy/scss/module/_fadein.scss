@@ -17,3 +17,9 @@
 		@include fadein(40px, unset);
 	}
 }
+
+@include mq(sp) {
+	.fade_in_left, .fade_in_right {
+		@include fadein(0px, 0px);
+	}
+}
