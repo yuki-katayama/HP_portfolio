@@ -2,9 +2,8 @@
 @import "../mixin/mq";
 
 %common {
-	width: 100vw;
 	padding: 5.5rem;
 	@include mq(sp) {
-		padding: 2.5rem 1.5rem 8.5rem;
+		padding: 2.5rem 1.5rem 5.5rem;
 	}
 }

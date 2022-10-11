@@ -494,21 +494,6 @@ body {
   transform: translateX(0);
 }
 
-@media screen and (max-width: 767px) {
-  .fade_in_left {
-    transition: 1s;
-    opacity: 0;
-    transform: translateX(0px);
-  }
-  .fade_in_left.active {
-    transition: 1s;
-    opacity: 1;
-  }
-  .fade_in_left.active {
-    transform: translateX(0);
-  }
-}
-
 .fade_in_right {
   transition: 1s;
   opacity: 0;
@@ -525,16 +510,16 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .fade_in_right {
+  .fade_in_left, .fade_in_right {
     transition: 1s;
     opacity: 0;
     transform: translateX(0px);
   }
-  .fade_in_right.active {
+  .fade_in_left.active, .fade_in_right.active {
     transition: 1s;
     opacity: 1;
   }
-  .fade_in_right.active {
+  .fade_in_left.active, .fade_in_right.active {
     transform: translateX(0);
   }
 }

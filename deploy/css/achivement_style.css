@@ -11,13 +11,12 @@ body {
 }
 
 .achivement {
-  width: 100vw;
   padding: 5.5rem;
 }
 
 @media screen and (max-width: 767px) {
   .achivement {
-    padding: 2.5rem 1.5rem 8.5rem;
+    padding: 2.5rem 1.5rem 5.5rem;
   }
 }
 

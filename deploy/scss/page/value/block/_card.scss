@@ -3,11 +3,11 @@
 		width: 17rem;
 		background-color: colors(reset);
 		position: relative;
-		height: 27rem;
+		height: 26rem;
 		margin-top: $i * 4rem;
 		@include mq(sp) {
-			width: unset;
-			margin-top: 6rem;
+			width: 17rem;
+			margin: 6rem auto 0rem;
 		}
 	}
 }
@@ -26,7 +26,7 @@
 	}
 	&_num {
 		color: colors(sub-font);
-		font-size: 4.5rem;
+		font-size: 4rem;
 		top: -1rem;
 		position: absolute;
 		z-index: 0;

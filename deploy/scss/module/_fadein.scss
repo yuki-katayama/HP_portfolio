@@ -1,4 +1,23 @@
-@import "../mixin/fadein";
+@mixin fadein($x, $y) {
+	transition: 1s;
+	opacity: 0;
+	&.active {
+		transition: 1s;
+		opacity: 1;
+	}
+	@if $x == unset {
+		transform: translateY($y);
+		&.active {
+			transform: translateY(0);
+		}
+
+	} @else {
+		transform: translateX($x);
+		&.active {
+			transform: translateX(0);
+		}
+	}
+}
 
 .fade_in {
 	&_center {

@@ -10,13 +10,12 @@ body {
 }
 
 .profile {
-  width: 100vw;
   padding: 5.5rem;
 }
 
 @media screen and (max-width: 767px) {
   .profile {
-    padding: 2.5rem 1.5rem 8.5rem;
+    padding: 2.5rem 1.5rem 5.5rem;
   }
 }
 
@@ -65,7 +64,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .profile .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -80,11 +80,16 @@ body {
   .profile .right {
     position: relative;
     top: -5rem;
+    margin-bottom: -5rem;
     background: #FFFFFF;
     padding: 2rem 1rem;
     width: 85%;
     margin-left: 3.5rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
     background: #F5F5F7;
   }
+}
+
+.profile .caption {
+  font-size: 0.8rem;
 }

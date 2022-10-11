@@ -28,7 +28,8 @@
 		margin-bottom: 3rem;
 		font-weight: 400;
 		@include mq(sp) {
-			font-size: 1.8rem;
+			font-size: 1.5rem;
+			margin-bottom: 1.5rem;
 		}
 
 	} @else if $name == achivement {

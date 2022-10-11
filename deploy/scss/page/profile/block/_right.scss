@@ -6,11 +6,12 @@
 	@include mq(sp) {
 		position: relative;
 		top: -5rem;
+		margin-bottom: -5rem;
 		background: colors(reset);
 		padding: 2rem 1rem;
 		width: 85%;
 		margin-left: 3.5rem;
-		line-height: 2rem;
+		line-height: 1.8rem;
 		background: colors(background);
 	}
 }
