@@ -29,8 +29,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: checkout
-      uses: actions/checkout@vueproject  # リポジトリをチェックアウト
-      run: cd deploy
+    - uses: actions/checkout@vueproject  # リポジトリをチェックアウト
+    - run: cd deploy
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
