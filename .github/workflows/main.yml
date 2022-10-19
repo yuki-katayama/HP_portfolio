@@ -30,7 +30,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     # - name: checkout
 
-    - uses: actions/checkout@vueproject  # リポジトリをチェックアウト
+    - uses: actions/checkout@master  # リポジトリをチェックアウト
 
     - run: cd deploy
     - name: Use Node.js ${{ matrix.node-version }}
