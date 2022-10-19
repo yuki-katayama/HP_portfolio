@@ -5,7 +5,6 @@ phases:
     commands:
       - if [ -e /tmp/node_modules.tar ]; then tar xf /tmp/node_modules.tar; fi
       - cd deploy
-      - cwd
       - npm install
   build:
     commands:
