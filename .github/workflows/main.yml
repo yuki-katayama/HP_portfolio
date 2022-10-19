@@ -40,10 +40,14 @@ jobs:
     - run: npm install ci
     - run: npm ci
     - run: npm run build --if-present
-    - name: deploy to s3  # S3にデプロイ
+    - name: s3 sync
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-northeast-1'
+        AWS_S3_BUCKET: my-port-folio-yh-tekitou-cdk
+        SOURCE_DIR: 'dist'
       # S3のbucket-for-deploying-react-projectバケットにデプロイ
-      run: |
-        aws s3 cp --recursive --region ap-northeast-1 ./deploy/dist/. s3://my-port-folio-yh-tekitou-cdk
