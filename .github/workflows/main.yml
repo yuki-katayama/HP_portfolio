@@ -6,8 +6,6 @@ name: Build portfolio on S3
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "vueproject" ]
-  pull_request:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -17,37 +15,18 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    name: build and deploy to s3
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [15.x, 16.x, 17.x]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    # - name: checkout
+      - uses: actions/checkout@master
 
-    - uses: actions/checkout@v3  # リポジトリをチェックアウト
-
-    - run: cd deploy
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install ci
-    - run: npm ci
-    - run: npm run build --if-present
-    - name: s3 sync
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'ap-northeast-1'
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        SOURCE_DIR: '**/dist'
-      # S3のbucket-for-deploying-react-projectバケットにデプロイ
+      - name: Deploy  # S3にデプロイ
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # S3のbucket-for-deploying-react-projectバケットにデプロイ
+        run: |
+          aws s3 cp --recursive --region ap-northeast-1 ./deploy/dist/. s3://$${{ AWS_BUCKET_NAME }}
