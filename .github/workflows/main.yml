@@ -48,6 +48,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'ap-northeast-1'
-        AWS_S3_BUCKET: my-port-folio-yh-tekitou-cdk
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         SOURCE_DIR: 'dist'
       # S3のbucket-for-deploying-react-projectバケットにデプロイ
