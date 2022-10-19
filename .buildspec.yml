@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo update npm...
+      - npm install -g n
+      - n latest
+      - npm update -g npm
+      - echo node -v
+      - node -v
+      - echo npm -v
+      - npm -v
+      - echo install yarn...
+      - npm install -g yarn
+      - echo yarn -v
+      - yarn -v
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - yarn install
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - yarn run build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Distributing to S3...
+      - aws s3 sync dist/develop s3://[アップロード用のS3バケット名] --delete --acl public-read
+artifacts:
+  files:
+    - dist/develop/**/*
