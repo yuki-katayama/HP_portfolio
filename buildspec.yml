@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - echo update npm...
-      - npm install -g n
+      - npm i -g npm@latest
       - n latest
       - npm update -g npm
       - echo node -v
@@ -28,7 +28,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Distributing to S3...
-      - aws s3 sync dist/develop s3://[アップロード用のS3バケット名] --delete --acl public-read
+      - aws s3 sync dist/develop s3://my-portfolio-yh --delete --acl public-read
 artifacts:
   files:
     - dist/develop/**/*
