@@ -1,9 +1,0 @@
-//共通
-@import "../mixin/mq";
-
-%common {
-	padding: 5.5rem;
-	@include mq(sp) {
-		padding: 2.5rem 1.5rem 5.5rem;
-	}
-}

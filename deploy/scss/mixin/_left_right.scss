@@ -1,9 +1,0 @@
-@mixin left_right($left-width, $right-width, $padding-right...) {
-	.left {
-		width: $left-width;
-	}
-	.right {
-		width: $right-width;
-		padding: $padding-right;
-	}
-}
