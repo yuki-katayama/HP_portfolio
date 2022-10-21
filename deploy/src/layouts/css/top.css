@@ -1,0 +1,589 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice, .value, .profile, .achivement, .news {
+  padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .voice, .value, .profile, .achivement, .news {
+    padding: 2.5rem 1.5rem 5.5rem;
+  }
+}
+
+.voice .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  line-height: 3rem;
+  height: calc(1.2vw * 35);
+}
+
+@media screen and (max-width: 767px) {
+  .voice .container {
+    height: unset;
+    line-height: 1.5rem;
+    height: 100%;
+    display: block;
+  }
+}
+
+.voice .subtitle {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.voice .subtitle > h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .voice .subtitle {
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    margin-left: unset;
+  }
+  .voice .subtitle > h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .voice .caption {
+    margin: auto;
+    line-height: 2rem;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice, .value, .profile, .achivement, .news {
+  padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .voice, .value, .profile, .achivement, .news {
+    padding: 2.5rem 1.5rem 5.5rem;
+  }
+}
+
+.value {
+  background-color: #F5F5F7;
+}
+
+.value .container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: unset;
+}
+
+@media screen and (max-width: 767px) {
+  .value .container {
+    display: block;
+  }
+}
+
+.value .subtitle {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.value .card1 {
+  width: 17rem;
+  background-color: #FFFFFF;
+  position: relative;
+  height: 26rem;
+  margin-top: 0rem;
+}
+
+@media screen and (max-width: 767px) {
+  .value .card1 {
+    width: 17rem;
+    margin: 6rem auto 0rem;
+  }
+}
+
+.value .card2 {
+  width: 17rem;
+  background-color: #FFFFFF;
+  position: relative;
+  height: 26rem;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .value .card2 {
+    width: 17rem;
+    margin: 6rem auto 0rem;
+  }
+}
+
+.value .card3 {
+  width: 17rem;
+  background-color: #FFFFFF;
+  position: relative;
+  height: 26rem;
+  margin-top: 8rem;
+}
+
+@media screen and (max-width: 767px) {
+  .value .card3 {
+    width: 17rem;
+    margin: 6rem auto 0rem;
+  }
+}
+
+.value .card_title {
+  color: #061A48;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.value .card_caption {
+  color: #5F5F5F;
+  padding: 0 1.5rem;
+}
+
+.value .card_num {
+  color: #9BACC8;
+  font-size: 4rem;
+  top: -1rem;
+  position: absolute;
+  z-index: 0;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice, .value, .profile, .achivement, .news {
+  padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .voice, .value, .profile, .achivement, .news {
+    padding: 2.5rem 1.5rem 5.5rem;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.profile .left {
+  width: 50%;
+}
+
+.profile .right {
+  width: 50%;
+  padding: 2rem 0 0 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .profile .left {
+    width: 100%;
+  }
+  .profile .right {
+    width: 100%;
+    padding: unset;
+  }
+}
+
+.profile .container {
+  display: flex;
+  justify-content: unset;
+  flex-direction: unset;
+}
+
+@media screen and (max-width: 767px) {
+  .profile .container {
+    display: block;
+  }
+}
+
+.profile .subtitle {
+  letter-spacing: 1.85px;
+  color: #5F5F5F;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .profile .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.profile .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2.3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .profile .right {
+    position: relative;
+    top: -5rem;
+    margin-bottom: -5rem;
+    background: #FFFFFF;
+    padding: 2rem 1rem;
+    width: 85%;
+    margin-left: 3.5rem;
+    line-height: 1.8rem;
+    background: #F5F5F7;
+  }
+}
+
+.profile .caption {
+  font-size: 0.8rem;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice, .value, .profile, .achivement, .news {
+  padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .voice, .value, .profile, .achivement, .news {
+    padding: 2.5rem 1.5rem 5.5rem;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.achivement {
+  background-color: #F5F5F7;
+}
+
+.achivement .box {
+  display: flex;
+  justify-content: unset;
+  flex-direction: unset;
+  margin-bottom: 6rem;
+}
+
+.achivement .box_rev {
+  display: flex;
+  justify-content: unset;
+  flex-direction: row-reverse;
+  margin-bottom: 6rem;
+}
+
+.achivement .box_odd .left {
+  width: 50%;
+}
+
+.achivement .box_odd .right {
+  width: 50%;
+  padding: 2rem 2rem;
+}
+
+.achivement .box_odd .left {
+  margin-left: 3rem;
+}
+
+.achivement .box_odd .right {
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  margin: auto 0 auto -3rem;
+  height: 19rem;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+  .achivement .box_odd .left {
+    width: 100%;
+  }
+  .achivement .box_odd .right {
+    width: 100%;
+    padding: unset;
+  }
+  .achivement .box_odd .right {
+    margin-top: -2rem;
+    height: unset;
+    margin: -2rem auto;
+    width: 85%;
+    padding: 1.5rem;
+  }
+}
+
+.achivement .box_odd_button {
+  text-align: right;
+  margin: 1rem 0 0 0;
+}
+
+.achivement .box_even .left {
+  width: 50%;
+}
+
+.achivement .box_even .right {
+  width: 50%;
+  padding: 2rem 2rem;
+}
+
+.achivement .box_even .left {
+  margin-left: -3rem;
+}
+
+.achivement .box_even .right {
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  margin: auto 0 auto 3rem;
+  height: 19rem;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 767px) {
+  .achivement .box_even .left {
+    width: 100%;
+  }
+  .achivement .box_even .right {
+    width: 100%;
+    padding: unset;
+  }
+  .achivement .box_even .right {
+    margin-top: -2rem;
+    height: unset;
+    margin: -2rem auto;
+    width: 85%;
+    padding: 1.5rem;
+  }
+}
+
+.achivement .box_even_button {
+  text-align: left;
+  margin: 1rem 0 0 0;
+}
+
+.achivement .box_title {
+  text-align: left;
+  color: #9BACC8;
+  font-size: 2rem;
+  opacity: 1;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .achivement .box {
+    display: block;
+  }
+  .achivement .box_rev {
+    display: block;
+  }
+  .achivement .box_odd .left, .achivement .box_even .left {
+    width: 50%;
+  }
+  .achivement .box_odd .right, .achivement .box_even .right {
+    width: 50%;
+    padding: 2rem 2rem;
+  }
+  .achivement .box_odd .left, .achivement .box_even .left {
+    margin-left: 0;
+  }
+  .achivement .box_odd .right, .achivement .box_even .right {
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    margin: auto 0 auto 0;
+    height: 19rem;
+    opacity: 0.9;
+  }
+}
+
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .achivement .box_odd .left, .achivement .box_even .left {
+    width: 100%;
+  }
+  .achivement .box_odd .right, .achivement .box_even .right {
+    width: 100%;
+    padding: unset;
+  }
+  .achivement .box_odd .right, .achivement .box_even .right {
+    margin-top: -2rem;
+    height: unset;
+    margin: -2rem auto;
+    width: 85%;
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .achivement .box_odd_button, .achivement .box_even_button {
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+  .achivement .box_even .left {
+    width: 50%;
+  }
+  .achivement .box_even .right {
+    width: 50%;
+    padding: 2rem 2rem;
+  }
+  .achivement .box_even .left {
+    margin-left: 0;
+  }
+  .achivement .box_even .right {
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    margin: auto 0 auto 0;
+    height: 19rem;
+    opacity: 0.9;
+  }
+}
+
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .achivement .box_even .left {
+    width: 100%;
+  }
+  .achivement .box_even .right {
+    width: 100%;
+    padding: unset;
+  }
+  .achivement .box_even .right {
+    margin-top: -2rem;
+    height: unset;
+    margin: -2rem auto;
+    width: 85%;
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .achivement .box_title {
+    font-size: 1.5rem;
+  }
+}
+
+.achivement .left {
+  width: 50%;
+}
+
+.achivement .right {
+  width: 50%;
+  padding: 2rem 0 0 3rem;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice, .value, .profile, .achivement, .news {
+  padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .voice, .value, .profile, .achivement, .news {
+    padding: 2.5rem 1.5rem 5.5rem;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.news .container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: unset;
+}
+
+@media screen and (max-width: 767px) {
+  .news .container {
+    display: block;
+  }
+}
+
+.news .left {
+  width: 40%;
+}
+
+.news .right {
+  width: 40%;
+}
+
+.news figcaption {
+  border-left: solid 3px #C65955;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.news time {
+  color: #6C6666;
+}
+
+@media screen and (max-width: 767px) {
+  .news .left {
+    width: 100%;
+  }
+  .news .right {
+    width: 100%;
+  }
+  .news .right {
+    margin-top: 3rem;
+  }
+}
