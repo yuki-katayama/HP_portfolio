@@ -1,0 +1,31 @@
+@import '../../setting/config';
+@import '../../setting/function';
+@import '../../setting/common';
+
+@import '../../mixin/left_right';
+
+@import '../../mixin/container';
+@import '../../mixin/subtitle';
+@import '../../mixin/flex';
+
+.news {
+	@extend %common;
+	@import './block/container_subtitle';
+	@include left_right(40%, 40%);
+	figcaption {
+		border-left: solid 3px colors(title-border);
+		font-size: 1.2rem;
+		padding-left: 0.5rem;
+		margin-top: 1rem;
+	}
+	time {
+		color: colors(date);
+	}
+	@include mq(sp) {
+		@include left_right(100%, 100%);
+		.right {
+			margin-top: 3rem;
+		}
+	}
+}
+

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice {
+  padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .voice {
+    padding: 2.5rem 1.5rem 5.5rem;
+  }
+}
+
+.voice .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  line-height: 3rem;
+  height: calc(1.2vw * 35);
+}
+
+@media screen and (max-width: 767px) {
+  .voice .container {
+    height: unset;
+    line-height: 1.5rem;
+    height: 100%;
+    display: block;
+  }
+}
+
+.voice .subtitle {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.voice .subtitle > h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .voice .subtitle {
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    margin-left: unset;
+  }
+  .voice .subtitle > h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .voice .caption {
+    margin: auto;
+    line-height: 2rem;
+  }
+}

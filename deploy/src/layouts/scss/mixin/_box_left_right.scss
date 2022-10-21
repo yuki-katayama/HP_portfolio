@@ -1,0 +1,26 @@
+@mixin box_left_right($margin-left, $margin-right) {
+	@include left_right(50%, 50%, 2rem 2rem);
+	.left {
+		margin-left: $margin-left;
+	}
+	.right {
+		box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+		background-color: colors(reset);
+		margin: auto 0 auto $margin-right;
+		height: 19rem;
+		opacity: 0.9;
+		.subtitle {
+			@include subtitle(achivement);
+		}
+	}
+	@include mq(sp) {
+		@include left_right(100%, 100%, unset);
+		.right {
+			margin-top: -2rem;
+			height: unset;
+			margin: -2rem auto;
+			width: 85%;
+			padding: 1.5rem;
+		}
+	}
+}

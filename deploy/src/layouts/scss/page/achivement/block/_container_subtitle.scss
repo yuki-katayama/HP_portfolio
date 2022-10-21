@@ -1,0 +1,7 @@
+.container {
+	@include container(achivement);
+}
+
+.subtitle {
+	@include subtitle(achivement);
+}

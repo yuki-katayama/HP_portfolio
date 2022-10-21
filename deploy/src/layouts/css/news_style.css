@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Zen+Kurenaido&display=swap");
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.news {
+  padding: 5.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .news {
+    padding: 2.5rem 1.5rem 5.5rem;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.news .container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: unset;
+}
+
+@media screen and (max-width: 767px) {
+  .news .container {
+    display: block;
+  }
+}
+
+.news .left {
+  width: 40%;
+}
+
+.news .right {
+  width: 40%;
+}
+
+.news figcaption {
+  border-left: solid 3px #C65955;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.news time {
+  color: #6C6666;
+}
+
+@media screen and (max-width: 767px) {
+  .news .left {
+    width: 100%;
+  }
+  .news .right {
+    width: 100%;
+  }
+  .news .right {
+    margin-top: 3rem;
+  }
+}

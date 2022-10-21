@@ -1,0 +1,7 @@
+.container {
+	@include container(news);
+}
+
+.subtitle {
+	@include subtitle(news);
+}

@@ -1,0 +1,7 @@
+.container {
+	@include container(value);
+}
+
+.subtitle {
+	@include subtitle(value);
+}
