@@ -10,25 +10,23 @@ import { onMounted, ref, onUpdated } from "vue";
 // import fadeInListener from "./../functions/fadein";
 
 onMounted(() => {
-//   fadeInListener();
+  //   fadeInListener();
 });
 </script>
 
 <template>
   <footer class="footer">
-	<div class="container">
-		<section class="left">
-			<div class="content">Portfolio</div>
-		</section>
-		<section class="right">
-			<div class="content">
-				電話番号: <a href="tel:08042338795">080-4233-8795</a>
-			</div>
-			<div class="content">
-				e-mail: katayu810@gmail.com
-			</div>
-		</section>
-	</div>
+    <div class="container">
+      <section class="left">
+        <div class="content">Portfolio</div>
+      </section>
+      <section class="right">
+        <div class="content">
+          電話番号: <a href="tel:08042338795">080-4233-8795</a>
+        </div>
+        <div class="content">e-mail: katayu810@gmail.com</div>
+      </section>
+    </div>
   </footer>
 </template>
 
