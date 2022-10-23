@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import axios from "axios";
 import { ref } from "vue";
-import * as models from "@/models/models";
+import type * as models from "@/models/models";
 
 const form = ref<models.SesModel>({ name: "", email: "", content: "" });
 
