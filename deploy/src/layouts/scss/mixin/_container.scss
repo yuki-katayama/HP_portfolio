@@ -33,5 +33,8 @@
 		@include mq(sp) {
 			display: block;
 		}
+	} @else if $name == footer {
+		@include flex(center, unset, center);
+		height: 100%;
 	}
 }

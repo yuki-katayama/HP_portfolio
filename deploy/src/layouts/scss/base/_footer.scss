@@ -1,0 +1,19 @@
+@import '../mixin/left_right';
+@import '../mixin/container';
+@import '../mixin/flex';
+
+
+.footer {
+	padding: 2rem;
+	color: colors(reset);
+	font-size: 1.2rem;
+	background-color: colors(sub-font);
+	text-align: center;
+	@include left_right(50%, 50%);
+	.container {
+		@include container(footer);
+	}
+	@include mq(sp){
+		font-size: 0.6rem;
+	}
+}

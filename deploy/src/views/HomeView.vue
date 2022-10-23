@@ -4,6 +4,7 @@ import VoiceView from "./top/VoiceView.vue";
 import ValueView from "./top/ValueView.vue";
 import ProfileView from "./top/ProfileView.vue";
 import AchivementView from "./top/AchivementView.vue";
+import FormView from "./top/FormView.vue";
 import NewsView from "./top/NewsView.vue";
 import { onMounted, ref, onUpdated } from "vue";
 import fadeInListener from "./../functions/fadein";
@@ -34,6 +35,7 @@ onMounted(() => {
       <ProfileView />
       <AchivementView />
       <NewsView />
+      <FormView />
     </body>
   </main>
 </template>

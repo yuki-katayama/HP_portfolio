@@ -1,4 +1,5 @@
 @import './base/reset';
+@import './base/footer';
 
 @import './setting/config';
 @import './setting/function';
@@ -28,6 +29,8 @@
 		transform: translate(-50%, 0);
 	}
 }
+
+
 
 .vertical {
 	writing-mode: vertical-rl;

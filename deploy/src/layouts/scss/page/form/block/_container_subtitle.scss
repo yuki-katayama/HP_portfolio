@@ -1,0 +1,7 @@
+.container {
+	@include container(form);
+}
+
+.subtitle {
+	@include subtitle(form);
+}
