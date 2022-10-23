@@ -29,7 +29,7 @@ const reset = () => {
   form.value.content = "";
 };
 
-const fetchApi = async () => {
+const postForm = async () => {
   if (validate()) {
     return;
   }
@@ -48,7 +48,7 @@ const fetchApi = async () => {
 </script>
 <template>
   <article class="form">
-    <h2 class="title">Form</h2>
+    <h2 class="title">FORM</h2>
     <div class="form_container">
       <div class="form_input">
         <input placeholder="名前" v-model="form.name" />
@@ -63,7 +63,7 @@ const fetchApi = async () => {
         ></textarea>
       </div>
       <div class="submit">
-        <button :onclick="fetchApi">送信する</button>
+        <button :onclick="postForm">送信する</button>
       </div>
     </div>
   </article>
