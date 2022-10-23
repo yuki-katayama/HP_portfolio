@@ -10,7 +10,9 @@ const validate = () => {
   if (form.value.name === "") {
     error = "名前を入力してください";
   } else if (form.value.email === "") {
-    error = "メールを入力してください";
+    error = "e-mailを入力してください";
+  } else if (!form.value.email.match(/.+@.+\..+/)) {
+	error = "正しいe-mailを入力してください"
   } else if (form.value.content === "") {
     error = "内容を入力してください";
   }
@@ -20,6 +22,13 @@ const validate = () => {
   }
   return false;
 };
+
+const reset = () => {
+	form.value.name = ""
+	form.value.email = ""
+	form.value.content = ""
+}
+
 const fetchApi = async () => {
   if (validate()) {
     return;
@@ -34,6 +43,7 @@ const fetchApi = async () => {
       (response) => (alert("送信に成功しました"), console.log(response.data))
     )
     .catch((error) => console.log(error));
+	reset();
 };
 </script>
 <template>
