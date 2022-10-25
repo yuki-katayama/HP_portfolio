@@ -21,9 +21,6 @@ onMounted(() => {
         <div class="content">Portfolio</div>
       </section>
       <section class="right">
-        <div class="content">
-          電話番号: <a href="tel:08042338795">080-4233-8795</a>
-        </div>
         <div class="content">e-mail: katayu810@gmail.com</div>
       </section>
     </div>
