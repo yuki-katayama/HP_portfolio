@@ -8,4 +8,5 @@ https://tsudoi.org/guide/detail/9.html
 ## パッケージの自動更新
 [renovate](https://user-first.ikyu.co.jp/entry/2018/05/07/193755)
 
-## 
+## cdkのインストール
+npm install -g aws-cdk
