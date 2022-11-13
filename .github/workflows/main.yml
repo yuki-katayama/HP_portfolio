@@ -22,6 +22,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
+      - run: cd my-portfolio-aws
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: cd ..
 
       - name: Deploy  # S3にデプロイ
         env:
