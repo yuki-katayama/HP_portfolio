@@ -21,7 +21,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Use Node.js
+        uses: actions/setup-node@v18
+        with:
+          node-version: '18.x'
       - run: cd my-portfolio-aws
       - run: npm ci
       - run: npm run build
