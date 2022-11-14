@@ -7,11 +7,12 @@ export class Lambda {
 	lambda: cdk.aws_lambda.Function;
 
 	ConstructOrder() {};
-	public createResources(scope: Construct, lambdaName: string) {
+	public createLambdaForSes(scope: Construct, lambdaName: string, dirName: string, iamRole: cdk.aws_iam.Role) {
 		const fn = new lambda.Function(scope, lambdaName, {
 			runtime: lambda.Runtime.NODEJS_16_X,
-			handler: 'lambdaHandler',
-			code: lambda.Code.fromAsset('./lib/resources/lambda'),
+			handler: 'index.lambdaHandler',
+			code: lambda.Code.fromAsset('./lib/resources/lambda/' + dirName),
+			role: iamRole
 		});
 	}
 }

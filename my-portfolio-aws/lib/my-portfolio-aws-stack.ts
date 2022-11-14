@@ -7,15 +7,22 @@ import { Cloudfront } from './resources/cloudfront';
 import { Route53 } from './resources/route53';
 import { Acm } from './resources/acm';
 import { Lambda } from './resources/lambda';
+import { IamRole } from './resources/iam-role';
 
 const env = load({
   BacketName: String,
   ApigatewayName: String,
   DeployPathToBacket: String,
   DomainName: String,
-  LambdaName: String,
+  LambdaForSesName: String,
+  ConnectLambdaToSesRoleName: String
 });
 
+const ConnectLambdaToSes = {
+  roleName: env.ConnectLambdaToSesRoleName,
+  lambdaName: env.LambdaForSesName,
+  dirName: "send-ses"
+}
 
 export class MyPortfolioAwsStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -25,6 +32,7 @@ export class MyPortfolioAwsStack extends cdk.Stack {
     const route53 = new Route53();
     const acm = new Acm();
     const lambda = new Lambda();
+    const iamRole = new IamRole();
 
     super(scope, id, props);
       /* s3の作成 */
@@ -43,8 +51,10 @@ export class MyPortfolioAwsStack extends cdk.Stack {
       cloudfront.createResources(this, env.DomainName, s3.s3Bucket, acm.certificatemanager);
       /* route53をcloudFrontへ繋ぐ */
       route53.registerArecord(this, cloudfront.distribution, env.DomainName);
-      /* lambdaの作成 */
-      lambda.createResources(this, env.LambdaName);
+      /* SESと接続するlambdaに使用するIamRoleの作成 */
+      iamRole.createConnectLambdaToSesRole(this, ConnectLambdaToSes.roleName)
+      /* SESに関するlambdaの作成 */
+      lambda.createLambdaForSes(this, ConnectLambdaToSes.lambdaName, ConnectLambdaToSes.dirName, iamRole.connectLambdaToSesRole);
       /* apigatewayの作成 */
       apigateway.createResources(this, env.ApigatewayName);
       /* apigatewayにlambdaを繋げる */
