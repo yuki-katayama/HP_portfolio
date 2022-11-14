@@ -27,8 +27,10 @@ export class S3 {
 			publicReadAccess: true,
 			// // ブロックパブリックアクセスをすべてON
 			blockPublicAccess: s3.BlockPublicAccess.BLOCK_ACLS,
+			/* ブロックパブリックアクセス (バケット設定). */
+			// blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
 			/* 他のドメインからの HTTP リクエストを許可します。たとえば、website.com から amazonaws.com にオブジェクトをバケットにアップロードするリクエストを行う場合*/
-			websiteIndexDocument: "index.html"
+			websiteIndexDocument: "index.html",
 		  })
 	}
 
