@@ -8,6 +8,7 @@ import { Route53 } from './resources/route53';
 import { Acm } from './resources/acm';
 import { Lambda } from './resources/lambda';
 import { IamRole } from './resources/iam-role';
+import { ConnectLambdaToSes } from './models';
 
 const env = load({
   BacketName: String,
@@ -15,10 +16,11 @@ const env = load({
   DeployPathToBacket: String,
   DomainName: String,
   LambdaForSesName: String,
-  ConnectLambdaToSesRoleName: String
+  ConnectLambdaToSesRoleName: String,
+  AdminEmail: String,
 });
 
-const ConnectLambdaToSes = {
+const ConnectLambdaToSesData: ConnectLambdaToSes = {
   roleName: env.ConnectLambdaToSesRoleName,
   lambdaName: env.LambdaForSesName,
   dirName: "send-ses"
@@ -52,11 +54,12 @@ export class MyPortfolioAwsStack extends cdk.Stack {
       /* route53をcloudFrontへ繋ぐ */
       route53.registerArecord(this, cloudfront.distribution, env.DomainName);
       /* SESと接続するlambdaに使用するIamRoleの作成 */
-      iamRole.createConnectLambdaToSesRole(this, ConnectLambdaToSes.roleName)
+      iamRole.createConnectLambdaToSesRole(this, ConnectLambdaToSesData.roleName)
       /* SESに関するlambdaの作成 */
-      lambda.createLambdaForSes(this, ConnectLambdaToSes.lambdaName, ConnectLambdaToSes.dirName, iamRole.connectLambdaToSesRole);
+      lambda.createResources(this, ConnectLambdaToSesData.lambdaName, ConnectLambdaToSesData.dirName, iamRole.connectLambdaToSesRole);
       /* apigatewayの作成 */
       apigateway.createResources(this, env.ApigatewayName);
-      /* apigatewayにlambdaを繋げる */
+      /* apigatewayでSesのエンドポイント作成 */
+      apigateway.createEndpointSes(lambda.lambdaForSes, env.AdminEmail);
   }
 }

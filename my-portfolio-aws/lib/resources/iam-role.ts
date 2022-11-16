@@ -10,6 +10,7 @@ export class IamRole {
 			assumedBy: new iam.ServicePrincipal('lambda.amazonaws.com'),
 			description: 'allow lambda connect to ses',
 		});
+		/* ポリシーの追加 */
 		this.connectLambdaToSesRole.addManagedPolicy(
 			iam.ManagedPolicy.fromAwsManagedPolicyName("AmazonSESFullAccess")
 		);
