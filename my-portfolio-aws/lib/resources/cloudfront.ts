@@ -7,6 +7,7 @@ import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 export class Cloudfront {
 	oai: cdk.aws_cloudfront.OriginAccessIdentity;
 	distribution: cdk.aws_cloudfront.Distribution;
+	function: cdk.aws_cloudfront.Function | null = null;
 
 	ConstructOrder() {};
 
@@ -15,9 +16,21 @@ export class Cloudfront {
 			comment: 'Unique Domain Hosting Environment',
 		});
 	};
+	public createFunction(scope: Construct, functionName: string, filePath: string) {
+		this.function = new cloudfront.Function(
+			scope,
+			"function",
+			{
+			  functionName: functionName,
+			  code: cloudfront.FunctionCode.fromFile({
+				filePath: filePath,
+			  }),
+			}
+		);
+	}
 	public createResources(scope: Construct, domainName: string, bucket: cdk.aws_s3.Bucket, certificate: cdk.aws_certificatemanager.DnsValidatedCertificate) {
-		/* cloudfront 作成 */
-		this.distribution = new cloudfront.Distribution(scope, 'myDist', {
+		/* 設定ファイル作成 */
+		const json: any = {
 			/* s3バケットにつなげる */
 			defaultBehavior: {
 			origin: new origins.S3Origin(bucket, {
@@ -44,6 +57,15 @@ export class Cloudfront {
 			defaultRootObject: 'index.html',
 			// IPv6有無指定
 			enableIpv6: true,
-		})
+		}
+		if (this.function !== null) {
+			json["functionAssociations"] = [{
+				function: this.function,
+				eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
+			}]
+		}
+
+		/* cloudfront 作成 */
+		this.distribution = new cloudfront.Distribution(scope, 'myDist', json)
 	}
 }

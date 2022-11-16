@@ -4,11 +4,3 @@ export interface SesForm {
     email: string,
     content: string,
 }
-
-export type KindOfLambda = 'send-ses';
-
-export interface ConnectLambdaToSes {
-    roleName: string,
-    lambdaName: string,
-    dirName: KindOfLambda;
-}

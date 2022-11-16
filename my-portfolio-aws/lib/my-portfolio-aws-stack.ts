@@ -8,7 +8,7 @@ import { Route53 } from './resources/route53';
 import { Acm } from './resources/acm';
 import { Lambda } from './resources/lambda';
 import { IamRole } from './resources/iam-role';
-import { ConnectLambdaToSes } from './models';
+// import { Waf } from './resources/waf';
 
 const env = load({
   BacketName: String,
@@ -16,15 +16,14 @@ const env = load({
   DeployPathToBacket: String,
   DomainName: String,
   LambdaForSesName: String,
+  LambdaSesFileName: String,
   ConnectLambdaToSesRoleName: String,
   AdminEmail: String,
+  AccountId: String,
+  IsBasicCertification: Boolean,
+  BasicCertificationFunctionName: String,
+  BasicCertificationFunctionPath: String,
 });
-
-const ConnectLambdaToSesData: ConnectLambdaToSes = {
-  roleName: env.ConnectLambdaToSesRoleName,
-  lambdaName: env.LambdaForSesName,
-  dirName: "send-ses"
-}
 
 export class MyPortfolioAwsStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -35,6 +34,7 @@ export class MyPortfolioAwsStack extends cdk.Stack {
     const acm = new Acm();
     const lambda = new Lambda();
     const iamRole = new IamRole();
+    // const waf = new Waf();
 
     super(scope, id, props);
       /* s3の作成 */
@@ -49,17 +49,23 @@ export class MyPortfolioAwsStack extends cdk.Stack {
       route53.createResources(this, env.DomainName);
       /* 証明書発行 */
       acm.createResources(this, route53.publicHostedZone, env.DomainName);
+      /* Basic認証の設定 */
+      if (env.IsBasicCertification) {
+        cloudfront.createFunction(this, env.BasicCertificationFunctionName, env.BasicCertificationFunctionPath);
+      }
       /* cloudFrontの作成 */
       cloudfront.createResources(this, env.DomainName, s3.s3Bucket, acm.certificatemanager);
       /* route53をcloudFrontへ繋ぐ */
       route53.registerArecord(this, cloudfront.distribution, env.DomainName);
       /* SESと接続するlambdaに使用するIamRoleの作成 */
-      iamRole.createConnectLambdaToSesRole(this, ConnectLambdaToSesData.roleName)
+      iamRole.createConnectLambdaToSesRole(this, env.ConnectLambdaToSesRoleName)
       /* SESに関するlambdaの作成 */
-      lambda.createResources(this, ConnectLambdaToSesData.lambdaName, ConnectLambdaToSesData.dirName, iamRole.connectLambdaToSesRole);
+      lambda.createResources(this, env.LambdaForSesName, env.LambdaSesFileName, iamRole.connectLambdaToSesRole);
       /* apigatewayの作成 */
       apigateway.createResources(this, env.ApigatewayName);
       /* apigatewayでSesのエンドポイント作成 */
       apigateway.createEndpointSes(lambda.lambdaForSes, env.AdminEmail);
+
+      // waf.createResources(this);
   }
 }

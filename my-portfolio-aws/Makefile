@@ -1,4 +1,5 @@
 all:
+	rm -rf ./dist
 	npm run build
 	cdk synth
 	cdk deploy

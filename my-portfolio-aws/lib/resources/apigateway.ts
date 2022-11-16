@@ -2,15 +2,14 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as apigateway from 'aws-cdk-lib/aws-apigateway';
-import * as stepfunctions from 'aws-cdk-lib/aws-stepfunctions';
 
 export class Apigateway {
-	apigateway: cdk.aws_apigateway.RestApi;
+	restApiSes: cdk.aws_apigateway.RestApi;
 
 	ConstructOrder() {};
 	public createResources(scope: Construct, apigatewayName: string) {
 		/* apigatewayの作成 */
-		this.apigateway = new apigateway.RestApi(scope, apigatewayName, {
+		this.restApiSes = new apigateway.RestApi(scope, apigatewayName, {
 			defaultCorsPreflightOptions: {
 				allowOrigins: apigateway.Cors.ALL_ORIGINS,
 				allowMethods: apigateway.Cors.ALL_METHODS // this is also the default
@@ -20,7 +19,7 @@ export class Apigateway {
 	}
 	public createEndpointSes(lambda: cdk.aws_lambda.Function, adminEmail: string) {
 		/* apiのエンドポイントを作成 */
-		const post = this.apigateway.root.addResource('ses');
+		const post = this.restApiSes.root.addResource('ses');
 		const getBookIntegration = new apigateway.LambdaIntegration(lambda,{
 			requestTemplates: {
 				/* lambdaのeventに渡す形式を指定 */
